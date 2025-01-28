@@ -4,7 +4,7 @@ Plugin Name: Ultimate Membership Pro Addon
 Plugin URI: https://github.com/AhmedHany2021
 Description: this plugin add some features to integrate ultimate membership pro with woocommerce
 Author: Ahmed Hany
-Version: 1.0.0
+Version: 1.1.0
 Author URI: https://github.com/AhmedHany2021
 GitHub Plugin URI: https://github.com/AhmedHany2021
 */
@@ -39,7 +39,6 @@ autoload::fire();
 
 add_action('plugins_loaded', function() {
     if (is_plugin_active('indeed-membership-pro/indeed-membership-pro.php')) {
-
         require_once MADN_ORIGINAL_DIR.'classes/Ihc_Db.class.php';
         require_once MADN_ORIGINAL_DIR.'classes/Ajax.php';
         $PayMembership = new PayMembershipClass();

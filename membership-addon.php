@@ -31,6 +31,7 @@ if(!defined("MADN_ORIGINAL_DIR")) { define("MADN_ORIGINAL_DIR", WP_PLUGIN_DIR . 
 
 require_once MADN_INC . 'autoload.php';
 use MEMBERSHIPADDON\INCLUDES\autoload;
+use MEMBERSHIPADDON\INCLUDES\InitPluginClass;
 use MEMBERSHIPADDON\INCLUDES\PayMembershipClass;
 use MEMBERSHIPADDON\INCLUDES\MediaIDToLinkShortcode;
 
@@ -40,7 +41,9 @@ add_action('plugins_loaded', function() {
     if (is_plugin_active('indeed-membership-pro/indeed-membership-pro.php')) {
 
         require_once MADN_ORIGINAL_DIR.'classes/Ihc_Db.class.php';
+        require_once MADN_ORIGINAL_DIR.'classes/Ajax.php';
         $PayMembership = new PayMembershipClass();
+        $init = new InitPluginClass();
     }
 });
 

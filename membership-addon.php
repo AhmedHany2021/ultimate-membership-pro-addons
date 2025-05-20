@@ -43,6 +43,8 @@ add_action('plugins_loaded', function() {
     if (is_plugin_active('indeed-membership-pro/indeed-membership-pro.php')) {
         require_once MADN_ORIGINAL_DIR.'classes/Ihc_Db.class.php';
         require_once MADN_ORIGINAL_DIR.'classes/RegisterForm.php';
+        require_once MADN_ORIGINAL_DIR.'classes/ValidateForm.php';
+
         $PayMembership = new PayMembershipClass();
         $init = new InitPluginClass();
     }
